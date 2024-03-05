@@ -25,9 +25,7 @@ public class Main {
                         input = scanner.nextInt();
                         if (input >= 0) {
                             if (n >= store.length) {
-                                Integer[] temp = new Integer[store.length * 2];
-                                System.arraycopy(store, 0, temp, 0, store.length);
-                                store = temp;
+                                store = Arrays.copyOf(store, store.length * 2);
                             }
                             store[n++] = input;
                         }
